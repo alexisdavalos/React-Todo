@@ -4,18 +4,7 @@ import TodoForm from './components/TodoComponents/TodoForm';
 import './components/TodoComponents/Todo.css';
 
 
-const toDo = [
-  {
-    task: 'Organize Garage',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    task: 'Bake Cookies',
-    id: 1528817084358,
-    completed: false
-  }
-];
+const toDo = [];
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -40,6 +29,12 @@ class App extends React.Component {
       toDoList: [...this.state.toDoList, newTask] //spreads in current state of data and adds new task to the end
     })
   }
+  //clears list of tasks
+  clearList = () =>{
+    this.setState({
+      toDoList: []
+    })
+  }
   //toggles task completion
   toggleTask = id =>{
 
@@ -59,12 +54,26 @@ class App extends React.Component {
       toDoList: newToDoList
     })
   }
+  clearTask = id =>{
+    // let indexToDelete;
+    // const clearedTaskList = this.state.toDoList.map((item, index) =>{
+    //   if(item.id === id){
+    //     item.splice(index,1)
+    //   }else{
+    //     return item;
+    //   }
+    //   this.setState({
+    //     toDoList: clearedTaskList
+    //   })
+    // })
+    
+  }
   render() {
     return (
-      <div>
-        <h2>Todo List: MVP</h2>
-        <TodoForm addToList={this.addToList}/>
-        <TodoList toggleTask={this.toggleTask} toDoList={this.state.toDoList}/>
+      <div className='wrapper'>
+        <h1>Add New Tasks</h1>
+        <TodoForm clearList={this.clearList} addToList={this.addToList}/>
+        <TodoList clearTask={this.clearTask} toggleTask={this.toggleTask} toDoList={this.state.toDoList}/>
       </div>
     );
   }

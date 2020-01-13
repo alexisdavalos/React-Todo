@@ -1,8 +1,29 @@
+body{
+    margin: 0;
+}
+div > div {
+    width:50%;
+}
+.ItemWrapper{
+    margin-top:1%;
+}
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}
 .item{
-    color:blue;
+    color:white;
     font-weight: bold;
+    background:#41e1da;
+    border: solid 2px;
+    padding: 1%;
+    width:100%;
+    text-align:center;
 }
 .item.completed{
-    color:red;
     text-decoration: line-through;
+    background: orangered;
 }
