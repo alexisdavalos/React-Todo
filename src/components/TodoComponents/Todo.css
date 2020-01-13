@@ -1,0 +1,8 @@
+.item{
+    color:blue;
+    font-weight: bold;
+}
+.item.completed{
+    color:red;
+    text-decoration: line-through;
+}
