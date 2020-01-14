@@ -26,13 +26,17 @@ class TodoForm extends React.Component{
     handleSubmit = e => {
         //prevent submit default
         e.preventDefault();
-        if (this.state.taskName === ''){
+        //validates form - cannot be empty
+        if (this.state.taskName === ''){ 
             this.setState({
-                ...this.state,
-                valid:false
+                ...this.state, //spread the state in
+                valid:false //set valid to false - toggles form error/alert
             })
         }else{
             this.props.addToList(this.state.taskName);
+            this.setState({
+                taskName:'' //resets form on submit
+            })
             console.log('Submitting Form... \n Value:', this.state.taskName)
         }
     }
