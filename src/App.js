@@ -4,8 +4,18 @@ import TodoForm from './components/TodoComponents/TodoForm';
 import './components/TodoComponents/Todo.css';
 
 
-const toDo = [];
-
+const toDo = [
+  {
+    task: 'Organize Garage',
+    id: 1528817077286,
+    completed: false
+  },
+  {
+    task: 'Bake Cookies',
+    id: 1528817084358,
+    completed: false
+  }
+];
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -29,12 +39,7 @@ class App extends React.Component {
       toDoList: [...this.state.toDoList, newTask] //spreads in current state of data and adds new task to the end
     })
   }
-  //clears list of tasks
-  clearList = () =>{
-    this.setState({
-      toDoList: []
-    })
-  }
+
   //toggles task completion
   toggleTask = id =>{
 
@@ -54,6 +59,22 @@ class App extends React.Component {
       toDoList: newToDoList
     })
   }
+  //clears list of completed tasks
+  clearComplete = () =>{
+    console.log('clearing list..', this.state.toDoList)
+    const newToDoList = this.state.toDoList.filter(item => !item.completed)
+    console.log('setting list to state:', newToDoList);
+    this.setState({
+      toDoList: newToDoList
+    })
+  }
+  //empty the entire list
+  emptyList = () =>{
+    this.setState({
+      toDoList: []
+    })
+  }
+  
   clearTask = id =>{
     // let indexToDelete;
     // const clearedTaskList = this.state.toDoList.map((item, index) =>{
@@ -69,10 +90,11 @@ class App extends React.Component {
     
   }
   render() {
+    console.log('To Do List State:',this.state.toDoList);
     return (
       <div className='wrapper'>
         <h1>Add New Tasks</h1>
-        <TodoForm clearList={this.clearList} addToList={this.addToList}/>
+        <TodoForm emptyList ={this.emptyList} clearComplete={this.clearComplete} addToList={this.addToList} toDoList={this.state.toDoList}/>
         <TodoList clearTask={this.clearTask} toggleTask={this.toggleTask} toDoList={this.state.toDoList}/>
       </div>
     );

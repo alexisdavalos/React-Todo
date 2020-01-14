@@ -25,6 +25,7 @@ class TodoForm extends React.Component{
         this.props.addToList(this.state.taskName);
         console.log('Submitting Form... \n Value:', this.state.taskName)
     }
+
     render(){
         return(
             <>
@@ -33,10 +34,12 @@ class TodoForm extends React.Component{
                 type='text' 
                 name='itme' 
                 onChange={this.handleChannges}
+                value={this.state.taskName}
                 />
                 <button>Add</button>
             </form>
-            <button onClick={this.props.clearList}>Clear List</button>
+            <button onClick={() => this.props.clearComplete()}>Clear Completed</button>
+            <button onClick={() => this.props.emptyList()}>Empty List</button>
             </>
 
         );
