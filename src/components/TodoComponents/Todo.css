@@ -1,11 +1,21 @@
 body{
     margin: 0;
+    background-color: rgb(28, 32, 34) !important;
 }
-div > div {
-    width:50%;
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+p,h1,h2,h3{
+    margin:0 !important;
+    color:white;
 }
 .ListWrapper{
     margin-top:1%;
+    width:100%;
 }
 .ItemWrapper{
     width:100%;
@@ -18,22 +28,42 @@ div > div {
 .ItemWrapper > button{
     height:100%;
     width:10%;
-    background:orangered;
+    background: #7c05b9;
     border:none;
     color:white;
     font-weight:bold;
+}
+button{
+    background-color: #e64944;
+    padding:1%;
+    border:none;
+    color:white;
+}
+.Alert{
+    color: white !important;
+    background-color: #e649449e !important;
+    border-color: #e64944 !important;
+    margin-top:1%;
+}
+.GroupButton{
+    width:20%;
+}
+.GroupButton > button{
+    width:100%;
+    background: #7c05b9;
 }
 .wrapper{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width:100%;
+    max-width:100%;
+    padding:5%;
 }
 .item{
     color:white;
     font-weight: bold;
-    background:#41e1da;
+    background-color: #e64944;
     border: none;
     width:100%;
     height: 100%;
@@ -44,5 +74,9 @@ div > div {
 }
 .item.completed{
     text-decoration: line-through;
-    background: orangered;
+    background: #44e658;
+}
+.Error p{
+    color: #e64944;
+    font-weight:bold;
 }
