@@ -21,6 +21,7 @@ p,h1,h2,h3{
     color: white;
     border-bottom: 2px solid #e64944;
     width: 80%;
+    outline: none !important;
 }
 .ListWrapper{
     margin-top:1%;
@@ -54,6 +55,7 @@ button{
     padding:1%;
     border:none;
     color:white;
+    outline:none !important;
 }
 .Alert{
     color: white !important;
