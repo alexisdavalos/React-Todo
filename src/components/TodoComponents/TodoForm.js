@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, InputGroup, InputGroupAddon, Input} from 'reactstrap';
+import { Form, InputGroup, InputGroupAddon} from 'reactstrap';
 
 class TodoForm extends React.Component{
     //set state for task name
@@ -43,7 +43,7 @@ class TodoForm extends React.Component{
             <Form style={{width:'50%', marginTop:'1%'}} onSubmit={this.handleSubmit}>
                 <InputGroup>
                     <input
-                    class='Input'
+                    className='Input'
                     type='text' 
                     name='itme' 
                     onChange={this.handleChannges}

@@ -4,10 +4,9 @@ body{
 }
 section{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+}
+.listSection{
+    margin-top: 5%;
 }
 p,h1,h2,h3{
     margin:0 !important;
@@ -30,6 +29,9 @@ p,h1,h2,h3{
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+}
+.ListWrapper :nth-child(odd){
+    margin-left:0 !important;
 }
 .ItemWrapper{
     width:40%;

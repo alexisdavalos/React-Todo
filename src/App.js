@@ -90,7 +90,9 @@ class App extends React.Component {
         <section>
         <div><h1>Add New Tasks</h1></div>
         <TodoForm emptyList ={this.emptyList} clearComplete={this.clearComplete} addToList={this.addToList} toDoList={this.state.toDoList}/>
-        <TodoList clearTask={this.clearTask} toggleTask={this.toggleTask} toDoList={this.state.toDoList}/>
+        </section>
+        <section className='listSection'>
+          <TodoList clearTask={this.clearTask} toggleTask={this.toggleTask} toDoList={this.state.toDoList}/>
         </section>
       </div>
     );
