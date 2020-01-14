@@ -40,9 +40,10 @@ class TodoForm extends React.Component{
     render(){
         return(
             <>
-            <Form style={{width:'50%'}} onSubmit={this.handleSubmit}>
+            <Form style={{width:'50%', marginTop:'1%'}} onSubmit={this.handleSubmit}>
                 <InputGroup>
-                    <Input
+                    <input
+                    class='Input'
                     type='text' 
                     name='itme' 
                     onChange={this.handleChannges}

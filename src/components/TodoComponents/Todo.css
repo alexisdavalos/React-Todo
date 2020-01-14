@@ -14,6 +14,15 @@ p,h1,h2,h3{
     margin-top:1% !important;
     color:white;
 }
+.Input{
+    background:none;
+    border:none;
+    border-radius:none;
+    color:white;
+    border-bottom: 2px solid #e64944;
+    width:80%;
+
+}
 .ListWrapper{
     margin-top:1%;
     width:100%;
