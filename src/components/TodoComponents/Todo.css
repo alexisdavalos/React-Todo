@@ -11,24 +11,29 @@ section{
 }
 p,h1,h2,h3{
     margin:0 !important;
+    margin-top:1% !important;
     color:white;
 }
 .ListWrapper{
     margin-top:1%;
     width:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .ItemWrapper{
-    width:100%;
+    width:40%;
     display:flex;
     height: 75px;
-    margin: 10px 0;
+    margin: 1%;
     justify-content: center;
     align-items: center;
 }
 .ItemWrapper > button{
     height:100%;
-    width:10%;
-    background: #7c05b9;
+    width:20%;
+    background: #FCC03F;
     border:none;
     color:white;
     font-weight:bold;
@@ -50,7 +55,7 @@ button{
 }
 .GroupButton > button{
     width:100%;
-    background: #7c05b9;
+    background: #FCC03F;
 }
 .wrapper{
     display:flex;
@@ -74,7 +79,7 @@ button{
 }
 .item.completed{
     text-decoration: line-through;
-    background: #44e658;
+    background:#FCC03F;
 }
 .Error p{
     color: #e64944;

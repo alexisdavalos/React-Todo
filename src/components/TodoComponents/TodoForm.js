@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, InputGroup, InputGroupAddon, Input, FormFeedback} from 'reactstrap';
+import { Form, InputGroup, InputGroupAddon, Input} from 'reactstrap';
 
 class TodoForm extends React.Component{
     //set state for task name
