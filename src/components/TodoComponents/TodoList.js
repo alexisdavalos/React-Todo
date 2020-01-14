@@ -5,7 +5,7 @@ class TodoList extends React.Component{
     render(){
         console.log('Rendered Item List:', this.props.toDoList);
         return(
-            <div className='ItemWrapper'>
+            <div className='ListWrapper'>
                 <h2>Task list:</h2>
                 {(this.props.toDoList.length === 0) ? 
                 <p>Empty List! - Add New Items</p> : 

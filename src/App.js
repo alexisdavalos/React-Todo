@@ -74,19 +74,13 @@ class App extends React.Component {
       toDoList: []
     })
   }
-  
+
   clearTask = id =>{
-    // let indexToDelete;
-    // const clearedTaskList = this.state.toDoList.map((item, index) =>{
-    //   if(item.id === id){
-    //     item.splice(index,1)
-    //   }else{
-    //     return item;
-    //   }
-    //   this.setState({
-    //     toDoList: clearedTaskList
-    //   })
-    // })
+    console.log('clearing out task id:', id)
+    const newToDoList = this.state.toDoList.filter(item => item.id !== id)
+    this.setState({
+      toDoList:newToDoList
+    })
     
   }
   render() {
