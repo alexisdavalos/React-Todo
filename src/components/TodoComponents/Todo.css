@@ -14,13 +14,13 @@ p,h1,h2,h3{
     color:white;
 }
 .Input{
-    background:none;
-    border:none;
-    border-radius:none;
-    color:white;
+    background: none;
+    border: none;
+    border-radius: 0;
+    height: 50px;
+    color: white;
     border-bottom: 2px solid #e64944;
-    width:80%;
-
+    width: 80%;
 }
 .ListWrapper{
     margin-top:1%;
@@ -44,7 +44,7 @@ p,h1,h2,h3{
 .ItemWrapper > button{
     height:100%;
     width:20%;
-    background: #FCC03F;
+    background: #ffae00;
     border:none;
     color:white;
     font-weight:bold;
@@ -66,7 +66,7 @@ button{
 }
 .GroupButton > button{
     width:100%;
-    background: #FCC03F;
+    background: #ffae00;
 }
 .wrapper{
     display:flex;
@@ -90,7 +90,7 @@ button{
 }
 .item.completed{
     text-decoration: line-through;
-    background:#FCC03F;
+    background: #cecece;
 }
 .Error p{
     color: #e64944;
