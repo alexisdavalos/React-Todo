@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    background-color: rgb(28, 32, 34) !important;
+}
+section{
+    width: 100%;
+}
+.listSection{
+    margin-top: 5%;
+}
+p,h1,h2,h3{
+    margin:0 !important;
+    margin-top:1% !important;
+    color:white;
+}
+.Input{
+    background: none;
+    border: none;
+    border-radius: 0;
+    height: 50px;
+    color: white;
+    border-bottom: 2px solid #e64944;
+    width: 80%;
+    outline: none !important;
+}
+.ListWrapper{
+    margin-top:1%;
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ListWrapper :nth-child(odd){
+    margin-left:0 !important;
+}
+.ItemWrapper{
+    width:40%;
+    display:flex;
+    height: 75px;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+}
+.ItemWrapper > button{
+    height:100%;
+    width:20%;
+    background: #ffae00;
+    border:none;
+    color:white;
+    font-weight:bold;
+}
+button{
+    background-color: #e64944;
+    padding:1%;
+    border:none;
+    color:white;
+    outline:none !important;
+}
+.Alert{
+    color: white !important;
+    background-color: #e649449e !important;
+    border-color: #e64944 !important;
+    margin-top:1%;
+    width:40%;
+}
+.GroupButton{
+    width:20%;
+}
+.GroupButton > button{
+    width:100%;
+    background: #ffae00;
+}
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width:100%;
+    padding:5%;
+}
+.item{
+    color:white;
+    font-weight: bold;
+    background-color: #e64944;
+    border: none;
+    width:100%;
+    height: 100%;
+    text-align:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.item.completed{
+    text-decoration: line-through;
+    background: #cecece;
+}
+.Error p{
+    color: #e64944;
+    font-weight:bold;
+}
